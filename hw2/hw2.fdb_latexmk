@@ -1,7 +1,7 @@
 # Fdb version 2
 ["latex"] 0 "hw2.tex" "hw2.dvi" "hw2" 
   "hw2.tex" 1383185638 1156 9ae88ced95b780575a629484196dcb52 ""
-["pdflatex"] 1383187605 "hw2.tex" "hw2.pdf" "hw2" 
+["pdflatex"] 1383192750 "hw2.tex" "hw2.pdf" "hw2" 
   "/Users/bret/Library/texmf/tex/latex/jhwhw.cls" 1318351554 2927 1f3c37fde47172f57fc6742693fc58a3 ""
   "/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
@@ -48,6 +48,6 @@
   "/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def" 1306616590 55368 3c8a0d99822330f2dfabc0dfb09ce897 ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/tools/calc.sty" 1254151720 10075 18f0ccff816231e9905cd2b3a482a622 ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty" 1264379145 21932 e3a9cf32ee9b853b42be14c2f25b873c ""
-  "hw2.aux" 1383187606 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "hw2.out" 1383187606 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "hw2.tex" 1383187602 3377 de2b624a6f737d41eb9911c8b11edeef ""
+  "hw2.aux" 1383192751 830 f0cd017a47c4cc9f24bfc28b7a21be9c ""
+  "hw2.out" 1383192751 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "hw2.tex" 1383192749 6165 b0865f88386f22494bdb43c16055ee3b ""

@@ -45,10 +45,85 @@ urlcolor=blue
 Use Gauss's theorem to prove that the electric field at the surface of a conductor is normal to the surface and has a maganitude of $4 \pi k_E \sigma$, where $\sigma$ is the charge density per unit area on the surface.
 
 \solution
-Solution
+Starting with Gauss's Law, we can work out the volume integral to solve one side of the equation.  This volume integral should incorporate all of $\vec{E}$, including any possible tangential components.
+
+\begin{align}
+    \label{eq:gauss}\int_V  \vec{\nabla} \cdot \vec{E} d\tau &= \oint_S \vec{E} \cdot d\vec{a}
+\end{align}
+
+For a continuous, volumetric charge distribution
+
+\begin{align}
+    \label{eq:evol}\vec{E}(r) &= k_e \int_V \frac{\rho(\vec{r'})}{R^2}\hat{R}d\tau'
+\end{align}
+
+Putting \eqref{eq:evol} into Equation~\eqref{eq:gauss}
+
+\begin{align}
+    \int_V  \vec{\nabla} \cdot \left(k_e \int_V \frac{\rho(\vec{r'})}{R^2}\hat{R}d\tau'\right) d\tau &= \oint_S \vec{E} \cdot d\vec{a} \\
+    \int_V  \left(k_e \int_V \vec{\nabla} \cdot \frac{\hat{R}}{R^2}\rho(\vec{r'})d\tau'\right) d\tau &= \oint_S \vec{E} \cdot d\vec{a}
+\end{align}
+
+Remembering that
+
+\begin{align}
+    \vec{\nabla} \cdot \left( \frac{\hat{R}}{R^2} \right) &= 4 \pi \delta^3(\vec{R})
+\end{align}
+
+Thus
+
+\begin{align}
+    \int_V  
+    \left(k_e 
+    \int_V 4 \pi \delta^3(\vec{r}-\vec{r'}) \rho(\vec{r'})d\tau'
+    \right) d\tau
+    &= \oint_S \vec{E} \cdot d\vec{a} \\
+    \label{eq:volint}
+    4\pi k_e 
+    \int_V  
+    \rho d\tau
+    &=
+    \oint_S \vec{E} \cdot d\vec{a}
+\end{align}
+
+\pagebreak[3]
+
+Now we can focus on the RHS of this equation.  Lets draw a Gaussian, cylindrical pillbox around the surface of our boundary.
+
+\vspace{50 mm}
+
+As we reduce the height of this pillbox to nothing, a couple of important things happen.  Our volume integral from Equation~\eqref{eq:volint} reduces to an area integral and our volumetric charge density, $\rho$ reduces to $\sigma$.  Also, our surface integral in the radially normal direction of our cylindrical pillbox disappears.
+
+\begin{align}
+    4\pi k_e 
+    \int_V  
+    \sigma da
+    &=
+    \oint_S \vec{E_1} \cdot \hat{n_1} da + 
+    \cancelto{0}{\oint_S \vec{E}_{\hat{r}} \cdot \hat{n}_{\hat{r}} da} + 
+    \oint_S \vec{E_2} \cdot \hat{n_2} da
+\end{align}
+
+When you dot a vector into a unit vector (in this case, normal unit vectors), you get the magnitude of that vector in the unit vector direction.  Since region one points down, we give it a negative value and region 2 points up so it gets a positive value.  Since region one is a perfect conductor, $E_{2}$ goes to 0.
+
+\begin{align}
+    4\pi k_e  
+    \sigma
+    &=
+    E_{2\hat{n}} - \cancelto{0}{E_{1\hat{n}}}
+    \\
+    \Aboxed{
+    4\pi k_e  
+    \sigma
+    &=
+    E_{2\hat{n}}
+    }
+\end{align}
+
+Because our volume integral incorporates all of the electric field near the surface, and our surface integrals only take into account the normal components of the electric field, and they both satisfy Gauss's law, we can conclude that there are no tangential components to the electric field at the surface.
 
 \problem{J: 1.3(a,c)}
-Using the dirac delta functions in the appropriate coordinates, express the following charge distributions as three dimensional charge densities $\rho{(\vec{r})}$.
+Using the Dirac delta functions in the appropriate coordinates, express the following charge distributions as three dimensional charge densities $\rho{(\vec{r})}$.
 
 \part
 In spherical coordinates, a charge $Q$ uniformly distributed over a spherical shell of radius $R$.
